@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>عيادة الدكتور مازن أبو شهاب — طب وتجميل الأسنان في عمّان</title>
+<meta name="description" content="عيادة الدكتور مازن أبو شهاب لطب الأسنان في عمّان — رعاية متكاملة بلمسة إنسانية: تجميل، تبييض، تقويم، زراعة وعلاج الأطفال. احجز موعدك عبر واتساب." />
+<meta name="theme-color" content="#1b1f23" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#1b1f23;
+    --ink-2:#252b31;
+    --ink-3:#31383f;
+    --porcelain:#f7f4ee;
+    --porcelain-2:#efe9df;
+    --paper:#fffdf9;
+    --gold:#c69a45;
+    --gold-lite:#e2c584;
+    --gold-deep:#a97f2f;
+    --sky:#9db9c9;
+    --sky-deep:#5a8296;
+    --sky-mist:#e7eef2;
+    --muted:#6a6f74;
+    --line:rgba(27,31,35,.10);
+    --line-lite:rgba(255,255,255,.12);
+    --shadow:0 18px 50px -22px rgba(27,31,35,.45);
+    --shadow-sm:0 8px 26px -14px rgba(27,31,35,.40);
+    --r:18px;
+    --r-lg:26px;
+    --container:1180px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+
+  body{
+    font-family:"IBM Plex Sans Arabic",-apple-system,system-ui,sans-serif;
+    background:var(--porcelain);
+    color:var(--ink);
+    line-height:1.75;
+    font-weight:400;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+
+  h1,h2,h3,.display{font-family:"Reem Kufi","IBM Plex Sans Arabic",sans-serif;font-weight:600;line-height:1.25;letter-spacing:0}
+  .en{font-family:"IBM Plex Sans",sans-serif;direction:ltr;unicode-bidi:isolate}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+  ::selection{background:var(--gold);color:#fff}
+
+  .wrap{width:100%;max-width:var(--container);margin-inline:auto;padding-inline:clamp(20px,5vw,48px)}
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+    min-height:52px;padding:0 1.55rem;border-radius:100px;
+    font-family:"IBM Plex Sans Arabic",sans-serif;font-weight:600;font-size:1rem;
+    cursor:pointer;border:1px solid transparent;
+    transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s, background .35s, color .35s;
+    will-change:transform;white-space:nowrap;
+  }
+  .btn svg{width:20px;height:20px;flex:none}
+  .btn-wa{background:var(--gold);color:#1b1508;box-shadow:0 12px 30px -12px rgba(198,154,69,.75)}
+  .btn-wa:hover{transform:translateY(-3px);box-shadow:0 18px 38px -12px rgba(198,154,69,.9);background:var(--gold-lite)}
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+  .btn-ghost:hover{transform:translateY(-3px);border-color:var(--gold);color:var(--gold-deep)}
+  .btn-ghost.on-dark{color:#f3efe6;border-color:var(--line-lite)}
+  .btn-ghost.on-dark:hover{border-color:var(--gold-lite);color:var(--gold-lite)}
+  @media (prefers-reduced-motion: reduce){ .btn:hover{transform:none} }
+
+  /* ---------- Header ---------- */
+  header{
+    position:fixed;inset-block-start:0;inset-inline:0;z-index:60;
+    transition:background .4s, box-shadow .4s, backdrop-filter .4s;
+    background:transparent;
+  }
+  header.solid{
+    background:rgba(23,27,31,.86);
+    backdrop-filter:saturate(140%) blur(14px);
+    -webkit-backdrop-filter:saturate(140%) blur(14px);
+    box-shadow:0 1px 0 var(--line-lite);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:80px;transition:height .4s}
+  header.solid .nav{height:64px}
+
+  .brand{display:flex;align-items:center;gap:.7rem;color:#f5f1e8}
+  .brand .mark{width:38px;height:38px;flex:none;transition:transform .5s ease}
+  .brand:hover .mark{transform:rotate(-6deg)}
+  .brand .mark path{stroke:var(--gold-lite)}
+  .brand-txt{display:flex;flex-direction:column;line-height:1.12}
+  .brand-txt b{font-family:"Reem Kufi",sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:.2px}
+  .brand-txt span{font-size:.66rem;letter-spacing:.28em;color:var(--gold-lite);text-transform:uppercase;font-family:"IBM Plex Sans",sans-serif;opacity:.9}
+
+  .nav-links{display:none;align-items:center;gap:2rem}
+  .nav-links a{color:#e8e3d8;font-size:.98rem;font-weight:500;position:relative;padding:.25rem 0;opacity:.86;transition:opacity .3s,color .3s}
+  .nav-links a::after{content:"";position:absolute;inset-block-end:-2px;inset-inline-start:0;width:0;height:2px;background:var(--gold-lite);transition:width .35s ease}
+  .nav-links a:hover{opacity:1;color:#fff}
+  .nav-links a:hover::after{width:100%}
+  .nav-cta{display:none}
+
+  @media(min-width:900px){
+    .nav-links{display:flex}
+    .nav-cta{display:inline-flex}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;background:var(--ink);color:#f3efe6;overflow:hidden;padding-block:clamp(120px,20vw,170px) clamp(56px,10vw,96px)}
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(120% 80% at 85% -10%, rgba(90,130,150,.28), transparent 55%),
+      radial-gradient(90% 70% at 8% 8%, rgba(198,154,69,.16), transparent 50%);
+  }
+  .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1fr;gap:clamp(38px,7vw,60px);align-items:center}
+
+  .eyebrow{display:inline-flex;align-items:center;gap:.6rem;font-size:.8rem;letter-spacing:.06em;color:var(--gold-lite);
+    border:1px solid var(--line-lite);border-radius:100px;padding:.4rem .95rem;margin-block-end:1.5rem;background:rgba(255,255,255,.03)}
+  .eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--gold-lite);box-shadow:0 0 0 4px rgba(226,197,132,.18)}
+
+  .hero h1{font-size:clamp(2.35rem,8.5vw,4.3rem);font-weight:700;line-height:1.12;letter-spacing:-.5px}
+  .hero h1 .accent{color:var(--gold-lite)}
+  .hero p.lead{margin-block-start:1.4rem;font-size:clamp(1.05rem,3.6vw,1.28rem);color:#cfc9bc;font-weight:300;max-width:34ch}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:.85rem;margin-block-start:2.2rem}
+
+  .trust{display:flex;flex-wrap:wrap;align-items:center;gap:1.4rem;margin-block-start:2.4rem;padding-block-start:1.6rem;border-block-start:1px solid var(--line-lite)}
+  .trust .stat b{display:block;font-family:"Reem Kufi",sans-serif;font-size:1.5rem;color:#fff;font-weight:600}
+  .trust .stat span{font-size:.82rem;color:#a9a397}
+  .stars{color:var(--gold-lite);letter-spacing:2px;font-size:.95rem}
+
+  .hero-media{position:relative}
+  .hero-photo{
+    position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);
+    border:1px solid var(--line-lite);aspect-ratio:4/5;
+  }
+  .hero-photo img{width:100%;height:100%;object-fit:cover}
+  .hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(15,18,21,.55))}
+  .hero-badge{
+    position:absolute;inset-block-end:-18px;inset-inline-start:-14px;z-index:3;
+    background:var(--paper);color:var(--ink);border-radius:16px;padding:.85rem 1.1rem;
+    box-shadow:var(--shadow-sm);display:flex;align-items:center;gap:.7rem;max-width:76%;
+  }
+  .hero-badge .mk{width:34px;height:34px;flex:none}
+  .hero-badge .mk path{stroke:var(--gold-deep)}
+  .hero-badge b{font-family:"Reem Kufi",sans-serif;font-size:.95rem;display:block}
+  .hero-badge span{font-size:.76rem;color:var(--muted)}
+
+  @media(min-width:820px){
+    .hero-grid{grid-template-columns:1.05fr .95fr}
+    .hero-photo{aspect-ratio:3/4}
+  }
+
+  /* ---------- Section shell ---------- */
+  section{position:relative}
+  .band{padding-block:clamp(64px,11vw,120px)}
+  .sec-head{max-width:60ch;margin-block-end:clamp(34px,6vw,58px)}
+  .kicker{display:inline-flex;align-items:center;gap:.55rem;font-family:"IBM Plex Sans",sans-serif;font-size:.74rem;
+    letter-spacing:.26em;text-transform:uppercase;color:var(--gold-deep);font-weight:600;margin-block-end:1rem}
+  .kicker::before{content:"";width:26px;height:1px;background:var(--gold);display:inline-block}
+  .sec-head h2{font-size:clamp(1.9rem,5.6vw,2.9rem);font-weight:600;letter-spacing:-.5px}
+  .sec-head p{margin-block-start:1rem;color:var(--muted);font-size:clamp(1rem,2.6vw,1.12rem);font-weight:300}
+
+  /* ---------- About ---------- */
+  .about-grid{display:grid;grid-template-columns:1fr;gap:clamp(34px,6vw,64px);align-items:center}
+  .about-media{position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);aspect-ratio:5/4}
+  .about-media img{width:100%;height:100%;object-fit:cover}
+  .about-copy p{color:#43484d;margin-block-end:1.1rem}
+  .about-copy p.big{font-size:clamp(1.12rem,3vw,1.34rem);color:var(--ink);font-weight:400;line-height:1.7}
+  .pillars{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-block-start:1.8rem}
+  .pillar{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:1.05rem 1.1rem;transition:transform .4s,box-shadow .4s}
+  .pillar:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm)}
+  .pillar b{font-family:"Reem Kufi",sans-serif;display:flex;align-items:center;gap:.5rem;font-size:1.02rem;margin-block-end:.2rem}
+  .pillar b i{width:8px;height:8px;border-radius:50%;background:var(--gold);flex:none;font-style:normal}
+  .pillar span{font-size:.9rem;color:var(--muted);line-height:1.6}
+  @media(min-width:820px){ .about-grid{grid-template-columns:.95fr 1.05fr} .about-media{aspect-ratio:4/5} }
+
+  /* ---------- Services ---------- */
+  #services{background:linear-gradient(180deg,var(--porcelain),var(--porcelain-2))}
+  .svc-grid{display:grid;grid-template-columns:1fr;gap:1rem}
+  @media(min-width:560px){ .svc-grid{grid-template-columns:1fr 1fr} }
+  @media(min-width:960px){ .svc-grid{grid-template-columns:repeat(4,1fr)} }
+  .svc{
+    background:var(--paper);border:1px solid var(--line);border-radius:var(--r);
+    padding:1.5rem 1.4rem;position:relative;overflow:hidden;
+    transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s,border-color .45s;
+  }
+  .svc::before{content:"";position:absolute;inset-block-start:0;inset-inline:0;height:3px;
+    background:linear-gradient(90deg,var(--gold),var(--gold-lite));transform:scaleX(0);transform-origin:inline-end;transition:transform .45s ease}
+  .svc:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+  .svc:hover::before{transform:scaleX(1)}
+  .svc .ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:var(--sky-mist);margin-block-end:1rem;transition:background .4s}
+  .svc:hover .ic{background:#eadfc4}
+  .svc .ic svg{width:24px;height:24px;stroke:var(--sky-deep);transition:stroke .4s}
+  .svc:hover .ic svg{stroke:var(--gold-deep)}
+  .svc h3{font-size:1.16rem;font-weight:600;margin-block-end:.3rem}
+  .svc .lat{font-family:"IBM Plex Sans",sans-serif;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-deep);display:block;margin-block-end:.5rem;font-weight:600}
+  .svc p{font-size:.92rem;color:var(--muted);line-height:1.65}
+
+  /* ---------- Gallery ---------- */
+  .gal{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .gal figure{position:relative;overflow:hidden;border-radius:16px;box-shadow:var(--shadow-sm);background:var(--ink-2)}
+  .gal img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+  .gal figure:hover img{transform:scale(1.09)}
+  .gal figure figcaption{
+    position:absolute;inset-block-end:0;inset-inline:0;padding:1.4rem 1rem .9rem;
+    background:linear-gradient(180deg,transparent,rgba(15,18,21,.72));
+    color:#f3efe6;font-size:.86rem;font-family:"Reem Kufi",sans-serif;
+    transform:translateY(6px);opacity:0;transition:opacity .4s,transform .4s;
+  }
+  .gal figure:hover figcaption{opacity:1;transform:translateY(0)}
+  .gal .tall{grid-row:span 2}
+  @media(min-width:760px){ .gal{grid-template-columns:repeat(3,1fr);grid-auto-rows:200px} .gal figure{height:100%} }
+  @media (prefers-reduced-motion: reduce){ .gal figure:hover img{transform:none} }
+
+  /* ---------- Location ---------- */
+  #location{background:var(--ink);color:#eee7d9}
+  .loc-grid{display:grid;grid-template-columns:1fr;gap:clamp(30px,5vw,48px)}
+  #location .kicker{color:var(--gold-lite)}
+  #location .kicker::before{background:var(--gold-lite)}
+  #location .sec-head h2{color:#fff}
+  .loc-card{display:flex;flex-direction:column;gap:1.5rem}
+  .loc-row{display:flex;gap:1rem;align-items:flex-start;padding-block-end:1.4rem;border-block-end:1px solid var(--line-lite)}
+  .loc-row:last-of-type{border-block-end:0}
+  .loc-row .ic{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.05);display:grid;place-items:center;flex:none}
+  .loc-row .ic svg{width:22px;height:22px;stroke:var(--gold-lite)}
+  .loc-row .t b{font-family:"Reem Kufi",sans-serif;font-size:1.05rem;display:block;margin-block-end:.15rem;color:#fff}
+  .loc-row .t p{color:#b9b3a6;font-size:.95rem}
+  .loc-row .t a{color:#d9d2c4;border-block-end:1px solid transparent;transition:border-color .3s,color .3s}
+  .loc-row .t a:hover{color:var(--gold-lite);border-color:var(--gold-lite)}
+  .phone-num{font-family:"IBM Plex Sans",sans-serif;direction:ltr;unicode-bidi:isolate;letter-spacing:.5px}
+  .map{position:relative;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line-lite);min-height:340px}
+  .map iframe{width:100%;height:100%;min-height:340px;border:0;display:block;filter:grayscale(.15) contrast(1.02)}
+  .loc-actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-block-start:.4rem}
+  @media(min-width:860px){ .loc-grid{grid-template-columns:1fr 1.15fr} }
+
+  /* ---------- Contact / CTA ---------- */
+  #contact{background:linear-gradient(180deg,var(--porcelain-2),var(--porcelain))}
+  .cta-card{
+    position:relative;overflow:hidden;border-radius:var(--r-lg);
+    background:radial-gradient(120% 130% at 85% 0%, #2b333a, var(--ink));
+    color:#f3efe6;padding:clamp(38px,7vw,72px) clamp(26px,5vw,64px);text-align:center;box-shadow:var(--shadow);
+    border:1px solid var(--line-lite);
+  }
+  .cta-card::before{content:"";position:absolute;inset-block-start:-40%;inset-inline-end:-10%;width:60%;height:120%;
+    background:radial-gradient(closest-side,rgba(198,154,69,.22),transparent);pointer-events:none}
+  .cta-mark{width:56px;height:56px;margin:0 auto 1.3rem}
+  .cta-mark path{stroke:var(--gold-lite)}
+  .cta-card h2{font-size:clamp(1.8rem,5.5vw,2.7rem);font-weight:600;position:relative}
+  .cta-card p{color:#cfc9bc;margin-block-start:1rem;font-weight:300;max-width:46ch;margin-inline:auto;position:relative;font-size:clamp(1rem,2.6vw,1.14rem)}
+  .cta-actions{display:flex;flex-wrap:wrap;gap:.9rem;justify-content:center;margin-block-start:2rem;position:relative}
+  .cta-note{margin-block-start:1.4rem;font-size:.86rem;color:#8f8a7e;position:relative}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--ink);color:#a7a196;padding-block:clamp(40px,6vw,56px)}
+  .foot{display:flex;flex-direction:column;gap:1.6rem;align-items:center;text-align:center}
+  .foot .brand{color:#f0ebe0}
+  .foot-sep{width:100%;height:1px;background:var(--line-lite)}
+  .foot-row{display:flex;flex-direction:column;gap:.5rem;align-items:center;font-size:.9rem}
+  .foot-row .phone-num{color:#cfc9bc}
+  .credit{font-size:.85rem;color:#8b867b}
+  .credit a{color:var(--gold-lite);border-block-end:1px solid transparent;transition:border-color .3s}
+  .credit a:hover{border-color:var(--gold-lite)}
+  @media(min-width:720px){
+    .foot{flex-direction:row;justify-content:space-between;text-align:start}
+    .foot-row{align-items:flex-start}
+  }
+
+  /* ---------- Reveal ---------- */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .reveal[data-d="1"]{transition-delay:.09s}
+  .reveal[data-d="2"]{transition-delay:.18s}
+  .reveal[data-d="3"]{transition-delay:.27s}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1 !important;transform:none !important;transition:none !important}
+    .hero-photo,.svc,.pillar,.btn,.gal img{transition:none !important}
+  }
+
+  /* skip link */
+  .skip{position:absolute;inset-inline-start:-999px;top:0;background:var(--gold);color:#1b1508;padding:.6rem 1rem;border-radius:0 0 8px 0;z-index:100}
+  .skip:focus{inset-inline-start:0}
+  :focus-visible{outline:3px solid var(--sky-deep);outline-offset:3px;border-radius:4px}
+</style>
+</head>
+<body>
+<a href="#main" class="skip">تخطَّ إلى المحتوى</a>
+
+<!-- ============ HEADER ============ -->
+<header id="site-header">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="عيادة الدكتور مازن أبو شهاب — الصفحة الرئيسية">
+      <svg class="mark" viewBox="0 0 52 54" fill="none" aria-hidden="true">
+        <path d="M26 6c-5-3-11-2-14 2-3 4-3 10-2 17 1 6 3 15 5 19 1.6 3.2 4.4 3 5.4-1l2-8c.7-2.8 2.5-2.8 3.2 0l2 8c1 4 3.8 4.2 5.4 1 2-4 4-13 5-19 1-7 1-13-2-17-3-4-9-5-14-2z" stroke="#e2c584" stroke-width="2.4" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-txt">
+        <b>د. مازن أبو شهاب</b>
+        <span>Dental Care</span>
+      </span>
+    </a>
+
+    <nav class="nav-links" aria-label="التنقل الرئيسي">
+      <a href="#about">عن العيادة</a>
+      <a href="#services">خدماتنا</a>
+      <a href="#gallery">معرض الصور</a>
+      <a href="#location">الموقع</a>
+    </nav>
+
+    <a class="btn btn-wa nav-cta" href="https://wa.me/96265060158" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.02c-.25.7-1.45 1.34-2 1.42-.51.08-1.16.11-1.87-.12-.43-.14-.98-.32-1.69-.63-2.97-1.28-4.9-4.27-5.05-4.47-.15-.2-1.2-1.6-1.2-3.05 0-1.45.76-2.16 1.03-2.46.27-.3.59-.37.79-.37.2 0 .39 0 .57.01.18.01.43-.07.67.51.25.6.84 2.06.91 2.21.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.61.17.3.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.36 1.45.3.15.47.13.65-.08.17-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.71.81 2 .96.3.15.5.22.57.35.07.12.07.72-.18 1.42z"/></svg>
+      احجز موعدك
+    </a>
+  </div>
+</header>
+
+<main id="main">
+<span id="top"></span>
+
+<!-- ============ HERO ============ -->
+<section class="hero" aria-label="مقدمة">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow reveal"><span class="dot"></span> عيادة أسنان في عمّان · شارع الأميرة عائشة</span>
+      <h1 class="reveal" data-d="1">ابتسامةٌ تثق بها،<br><span class="accent">وعنايةٌ تشعر بها.</span></h1>
+      <p class="lead reveal" data-d="2">طب أسنان حديث بلمسة إنسانية. نجمع بين الدقّة العلاجية والراحة الحقيقية لنمنحك ولعائلتك تجربة تستحقها.</p>
+      <div class="hero-cta reveal" data-d="3">
+        <a class="btn btn-wa" href="https://wa.me/96265060158" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.02c-.25.7-1.45 1.34-2 1.42-.51.08-1.16.11-1.87-.12-.43-.14-.98-.32-1.69-.63-2.97-1.28-4.9-4.27-5.05-4.47-.15-.2-1.2-1.6-1.2-3.05 0-1.45.76-2.16 1.03-2.46.27-.3.59-.37.79-.37.2 0 .39 0 .57.01.18.01.43-.07.67.51.25.6.84 2.06.91 2.21.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.61.17.3.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.36 1.45.3.15.47.13.65-.08.17-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.71.81 2 .96.3.15.5.22.57.35.07.12.07.72-.18 1.42z"/></svg>
+          احجز موعدك عبر واتساب
+        </a>
+        <a class="btn btn-ghost on-dark" href="tel:+96265060158">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          اتصل بنا
+        </a>
+      </div>
+      <div class="trust reveal" data-d="3">
+        <div class="stat">
+          <b>4.3<span style="font-size:.9rem;color:var(--gold-lite)"> ★</span></b>
+          <span>تقييم زوّارنا على خرائط جوجل</span>
+        </div>
+        <div class="stat">
+          <b>7+</b>
+          <span>تخصّصات علاجية تحت سقفٍ واحد</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-media reveal" data-d="2">
+      <div class="hero-photo">
+        <img src="assets/photo-1.jpg" width="1050" height="1400" alt="منطقة استقبال عيادة الدكتور مازن أبو شهاب مع شعار العيادة الذهبي" fetchpriority="high" />
+      </div>
+      <div class="hero-badge">
+        <svg class="mk" viewBox="0 0 52 54" fill="none" aria-hidden="true">
+          <path d="M26 6c-5-3-11-2-14 2-3 4-3 10-2 17 1 6 3 15 5 19 1.6 3.2 4.4 3 5.4-1l2-8c.7-2.8 2.5-2.8 3.2 0l2 8c1 4 3.8 4.2 5.4 1 2-4 4-13 5-19 1-7 1-13-2-17-3-4-9-5-14-2z" stroke="#a97f2f" stroke-width="2.4" stroke-linejoin="round"/>
+        </svg>
+        <div>
+          <b>حجز مريح عبر واتساب</b>
+          <span>ردٌّ سريع وتحديد موعدٍ يناسبك</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="band">
+  <div class="wrap about-grid">
+    <div class="about-media reveal">
+      <img src="assets/photo-4.jpg" width="1050" height="1312" alt="صالة انتظار هادئة ومريحة داخل عيادة الدكتور مازن أبو شهاب" loading="lazy" />
+    </div>
+    <div class="about-copy">
+      <div class="sec-head reveal" data-d="1" style="margin-block-end:1.6rem">
+        <span class="kicker">عن العيادة</span>
+        <h2>عنايةٌ تبدأ من لحظة دخولك.</h2>
+      </div>
+      <p class="big reveal" data-d="1">في عيادة الدكتور مازن أبو شهاب، نؤمن أن زيارة طبيب الأسنان يمكن أن تكون تجربةً هادئة ومطمئنة — لا مجرّد موعدٍ عابر.</p>
+      <p class="reveal" data-d="2">نجمع بين خبرةٍ سريرية موثوقة وأحدث الأجهزة، ضمن بيئةٍ نظيفة ومصمّمة براحتك. من الفحص الأول وحتى آخر تفصيل في ابتسامتك، نشرح لك كل خطوة ونمنحك الوقت الذي تستحقه.</p>
+      <div class="pillars reveal" data-d="2">
+        <div class="pillar"><b><i></i> راحةٌ أولًا</b><span>خطة علاج واضحة وبيئة تشعر فيها بالأمان.</span></div>
+        <div class="pillar"><b><i></i> تعقيم دقيق</b><span>أعلى معايير النظافة والتعقيم في كل زيارة.</span></div>
+        <div class="pillar"><b><i></i> رعاية للعائلة</b><span>من الأطفال إلى الكبار، تحت سقفٍ واحد.</span></div>
+        <div class="pillar"><b><i></i> نتائج تدوم</b><span>تركيز على جودة العلاج وصحّة الفم طويلة الأمد.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="band">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">خدماتنا</span>
+      <h2>عناية متكاملة بأسنانك.</h2>
+      <p>تخصّصات علاجية وتجميلية شاملة نقدّمها بدقّة وعناية — لصحّة فمك وجمال ابتسامتك.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" aria-hidden="true"><path d="M12 4c-3-2-6-1-7 1s-1 5-.5 8 1.5 7 2.5 8 2-1 2.4-3l.6-3c.3-1.3 1.7-1.3 2 0l.6 3c.4 2 1.4 4 2.4 3s2-5 2.5-8 .5-6-.5-8-4-3-7-1z" stroke-linejoin="round"/></svg></div>
+        <span class="lat en">General</span>
+        <h3>طب الأسنان العام</h3>
+        <p>فحص دوري، حشوات وعلاج التسوّس والوقاية من مشاكل الأسنان.</p>
+      </article>
+      <article class="svc reveal" data-d="1">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" aria-hidden="true"><path d="M12 3l1.8 4.6L18.5 9l-3.7 3 1.2 4.9L12 14.4 8 16.9 9.2 12 5.5 9l4.7-1.4L12 3z" stroke-linejoin="round"/></svg></div>
+        <span class="lat en">Cosmetic</span>
+        <h3>تجميل الأسنان</h3>
+        <p>فينير وابتسامة هوليوود وتحسين شكل الأسنان ولونها بانسجام طبيعي.</p>
+      </article>
+      <article class="svc reveal" data-d="2">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" aria-hidden="true"><path d="M12 3v3M5 8l2 2M19 8l-2 2M12 20c-2.5 0-4-2-4-5 0-2.6 1.8-4 4-4s4 1.4 4 4c0 3-1.5 5-4 5z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="lat en">Whitening</span>
+        <h3>تبييض الأسنان</h3>
+        <p>تبييض آمن وفعّال يمنح ابتسامتك إشراقةً أكثر بياضًا ونضارة.</p>
+      </article>
+      <article class="svc reveal" data-d="3">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" aria-hidden="true"><path d="M5 6h14M5 12h14M5 18h14M9 4v4M15 10v4M9 16v4" stroke-linecap="round"/></svg></div>
+        <span class="lat en">Orthodontics</span>
+        <h3>تقويم الأسنان</h3>
+        <p>تقويم معدني وشفّاف لتصحيح اصطفاف الأسنان وإطباق الفكّين.</p>
+      </article>
+      <article class="svc reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" aria-hidden="true"><path d="M12 3v10M12 21v-2M8 6l4-3 4 3M9 13h6l-.7 5c-.2 1.3-1.1 2-2.3 2s-2.1-.7-2.3-2L9 13z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="lat en">Implants</span>
+        <h3>زراعة الأسنان</h3>
+        <p>تعويض الأسنان المفقودة بزراعاتٍ ثابتة تعيد الوظيفة والمظهر.</p>
+      </article>
+      <article class="svc reveal" data-d="1">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" aria-hidden="true"><path d="M14 3l7 7-4 4-7-7 4-4zM10 7L4 13v4h4l6-6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="lat en">Oral Surgery</span>
+        <h3>جراحة الفم</h3>
+        <p>خلع الأضراس وضرس العقل والإجراءات الجراحية بأمانٍ وعناية.</p>
+      </article>
+      <article class="svc reveal" data-d="2">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-6-4.5-6-9a6 6 0 0 1 12 0c0 4.5-6 9-6 9z" stroke-linejoin="round"/><circle cx="12" cy="12" r="2.2"/></svg></div>
+        <span class="lat en">Root Canal</span>
+        <h3>علاج الجذور</h3>
+        <p>علاج العصب وإنقاذ الأسنان المتضرّرة مع تخفيف الألم.</p>
+      </article>
+      <article class="svc reveal" data-d="3">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M4 20c0-3 2.2-5 5-5s5 2 5 5M15 5.5a3 3 0 0 1 0 5M17 20c0-2-.8-3.6-2-4.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <span class="lat en">Pediatric</span>
+        <h3>أسنان الأطفال</h3>
+        <p>رعاية لطيفة تُحبّب أطفالك بزيارة الطبيب وتحمي أسنانهم مبكرًا.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section id="gallery" class="band">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">من داخل العيادة</span>
+      <h2>مساحةٌ صُمّمت لراحتك.</h2>
+      <p>لمحة عن أجواء العيادة — من الاستقبال إلى غرف العلاج المجهّزة.</p>
+    </div>
+    <div class="gal">
+      <figure class="tall reveal">
+        <img src="assets/photo-2.jpg" width="1050" height="1400" alt="غرفة علاج مجهّزة بكرسي أسنان حديث خلف زجاج شفاف" loading="lazy" />
+        <figcaption>غرفة علاج مجهّزة بأحدث الأجهزة</figcaption>
+      </figure>
+      <figure class="reveal" data-d="1">
+        <img src="assets/photo-1.jpg" width="1050" height="700" alt="منطقة الاستقبال وشعار العيادة الذهبي" loading="lazy" />
+        <figcaption>استقبالٌ يرحّب بك</figcaption>
+      </figure>
+      <figure class="reveal" data-d="2">
+        <img src="assets/photo-4.jpg" width="1050" height="700" alt="صالة انتظار أنيقة مع مقاعد مريحة" loading="lazy" />
+        <figcaption>صالة انتظار هادئة</figcaption>
+      </figure>
+      <figure class="reveal" data-d="1">
+        <img src="assets/photo-3.jpg" width="1050" height="700" alt="لوحة اسم العيادة: عيادات د. مازن أبو شهاب لطب الأسنان" loading="lazy" />
+        <figcaption>عيادات د. مازن أبو شهاب</figcaption>
+      </figure>
+      <figure class="reveal" data-d="2">
+        <img src="assets/photo-5.jpg" width="1050" height="700" alt="شعار العيادة معلّق على جدار منطقة الاستقبال" loading="lazy" />
+        <figcaption>هويّة العيادة</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOCATION ============ -->
+<section id="location" class="band">
+  <div class="wrap loc-grid">
+    <div class="loc-card">
+      <div class="sec-head reveal" style="margin-block-end:.6rem">
+        <span class="kicker">الموقع والتواصل</span>
+        <h2>زورونا في عمّان.</h2>
+      </div>
+      <div class="loc-row reveal" data-d="1">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+        <div class="t"><b>العنوان</b><p>مجمع رقم ٣، شارع الأميرة عائشة بنت الحسين ٣، عمّان، الأردن</p></div>
+      </div>
+      <div class="loc-row reveal" data-d="1">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="t"><b>الهاتف</b><p><a href="tel:+96265060158" class="phone-num">+962 6 506 0158</a></p></div>
+      </div>
+      <div class="loc-row reveal" data-d="2">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="t"><b>المواعيد</b><p>نستقبلكم بموعدٍ مسبق. تواصلوا معنا عبر واتساب أو الهاتف لتحديد الوقت الأنسب لكم.</p></div>
+      </div>
+      <div class="loc-actions reveal" data-d="2">
+        <a class="btn btn-wa" href="https://wa.me/96265060158" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.02c-.25.7-1.45 1.34-2 1.42-.51.08-1.16.11-1.87-.12-.43-.14-.98-.32-1.69-.63-2.97-1.28-4.9-4.27-5.05-4.47-.15-.2-1.2-1.6-1.2-3.05 0-1.45.76-2.16 1.03-2.46.27-.3.59-.37.79-.37.2 0 .39 0 .57.01.18.01.43-.07.67.51.25.6.84 2.06.91 2.21.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.61.17.3.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.36 1.45.3.15.47.13.65-.08.17-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.71.81 2 .96.3.15.5.22.57.35.07.12.07.72-.18 1.42z"/></svg>
+          احجز موعدك
+        </a>
+        <a class="btn btn-ghost on-dark" href="https://maps.google.com/?cid=6890594544427283384&g_mp=Cilnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaE5lYXJieRACGAQgAA" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M9 20l-5.5 2.5V6L9 3.5m0 16.5l6-2.5m-6 2.5V3.5m6 14l5.5 2.5V6L15 3.5m0 14V3.5m0 0L9 6" stroke-linejoin="round" stroke-linecap="round"/></svg>
+          الاتجاهات على الخريطة
+        </a>
+      </div>
+    </div>
+
+    <div class="map reveal" data-d="1">
+      <iframe src="https://maps.google.com/maps?q=31.990861799999998,35.943412699999996&z=17&hl=ar&output=embed" title="موقع عيادة الدكتور مازن أبو شهاب على خرائط جوجل" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / CTA ============ -->
+<section id="contact" class="band">
+  <div class="wrap">
+    <div class="cta-card reveal">
+      <svg class="cta-mark" viewBox="0 0 52 54" fill="none" aria-hidden="true">
+        <path d="M26 6c-5-3-11-2-14 2-3 4-3 10-2 17 1 6 3 15 5 19 1.6 3.2 4.4 3 5.4-1l2-8c.7-2.8 2.5-2.8 3.2 0l2 8c1 4 3.8 4.2 5.4 1 2-4 4-13 5-19 1-7 1-13-2-17-3-4-9-5-14-2z" stroke="#e2c584" stroke-width="2.4" stroke-linejoin="round"/>
+      </svg>
+      <h2>جاهزون لابتسامتك القادمة.</h2>
+      <p>احجز موعدك الآن عبر واتساب — سنردّ عليك بسرعة ونساعدك في اختيار الوقت الأنسب. خطوتك الأولى نحو عنايةٍ تستحقها.</p>
+      <div class="cta-actions">
+        <a class="btn btn-wa" href="https://wa.me/96265060158" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.8 14.02c-.25.7-1.45 1.34-2 1.42-.51.08-1.16.11-1.87-.12-.43-.14-.98-.32-1.69-.63-2.97-1.28-4.9-4.27-5.05-4.47-.15-.2-1.2-1.6-1.2-3.05 0-1.45.76-2.16 1.03-2.46.27-.3.59-.37.79-.37.2 0 .39 0 .57.01.18.01.43-.07.67.51.25.6.84 2.06.91 2.21.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.61.17.3.76 1.25 1.63 2.02 1.12.99 2.06 1.3 2.36 1.45.3.15.47.13.65-.08.17-.2.74-.86.94-1.16.2-.3.4-.25.67-.15.27.1 1.71.81 2 .96.3.15.5.22.57.35.07.12.07.72-.18 1.42z"/></svg>
+          احجز موعدك عبر واتساب
+        </a>
+        <a class="btn btn-ghost on-dark" href="tel:+96265060158">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="phone-num">+962 6 506 0158</span>
+        </a>
+      </div>
+      <p class="cta-note">شارع الأميرة عائشة بنت الحسين · عمّان، الأردن</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap foot">
+    <div style="display:flex;flex-direction:column;gap:1rem;align-items:inherit">
+      <a href="#top" class="brand" aria-label="عيادة الدكتور مازن أبو شهاب">
+        <svg class="mark" viewBox="0 0 52 54" fill="none" aria-hidden="true">
+          <path d="M26 6c-5-3-11-2-14 2-3 4-3 10-2 17 1 6 3 15 5 19 1.6 3.2 4.4 3 5.4-1l2-8c.7-2.8 2.5-2.8 3.2 0l2 8c1 4 3.8 4.2 5.4 1 2-4 4-13 5-19 1-7 1-13-2-17-3-4-9-5-14-2z" stroke="#e2c584" stroke-width="2.4" stroke-linejoin="round"/>
+        </svg>
+        <span class="brand-txt"><b>د. مازن أبو شهاب</b><span>Dental Care</span></span>
+      </a>
+      <div class="foot-row">
+        <span>مجمع رقم ٣، شارع الأميرة عائشة بنت الحسين، عمّان</span>
+        <a href="tel:+96265060158" class="phone-num">+962 6 506 0158</a>
+      </div>
+    </div>
+
+    <div class="foot-row" style="gap:.9rem">
+      <a class="btn btn-ghost on-dark" href="https://wa.me/96265060158" target="_blank" rel="noopener" style="min-height:46px">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:18px;height:18px"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2z"/></svg>
+        تواصل عبر واتساب
+      </a>
+      <p class="credit">Demo by <a href="https://www.aro.solutions" target="_blank" rel="noopener">ARO Solutions</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Sticky header condense
+  (function(){
+    var header = document.getElementById('site-header');
+    var onScroll = function(){
+      if(window.scrollY > 24){ header.classList.add('solid'); }
+      else { header.classList.remove('solid'); }
+    };
+    onScroll();
+    window.addEventListener('scroll', onScroll, {passive:true});
+  })();
+
+  // Scroll reveal
+  (function(){
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var els = document.querySelectorAll('.reveal');
+    if(reduce || !('IntersectionObserver' in window)){
+      els.forEach(function(e){ e.classList.add('in'); });
+      return;
+    }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+      });
+    }, {threshold:0.14, rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(e){ io.observe(e); });
+  })();
+</script>
+</body>
+</html>
